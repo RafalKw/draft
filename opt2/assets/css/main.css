@@ -1110,7 +1110,7 @@ br.clear {
 }
 
 p, ul, ol, dl, table, blockquote, form {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 /* Table */
@@ -1314,7 +1314,6 @@ button.xlarge,
 
 /* List */
 ul {
-  list-style: disc;
   padding-left: 1em;
 }
 ul li {
@@ -1381,6 +1380,77 @@ ul.actions li:first-child {
 }
 .icon > .label {
   display: none;
+}
+
+ul.icons {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+ul.icons li {
+  display: inline-block;
+  padding: 0 1.5em 0 0;
+}
+ul.icons li:last-child {
+  padding-right: 0 !important;
+}
+ul.icons li .icon:before {
+  font-size: 1.75rem;
+}
+ul.icons.major li {
+  padding: 0 2.5em 0 0;
+}
+ul.icons.major li .icon:before {
+  font-size: 2.75rem;
+}
+@media screen and (max-width: 736px) {
+  ul.icons.major li {
+    padding: 0 1.25em 0 0;
+  }
+  ul.icons.major li .icon:before {
+    font-size: 1.75rem;
+  }
+}
+ul.icons.labeled li {
+  margin: 1em 0;
+  padding: 0 2em 0 0;
+}
+ul.icons.labeled li .icon:before {
+  vertical-align: middle;
+  font-size: 2.25rem;
+  margin-right: 0.5em;
+}
+ul.icons.labeled li .icon .label {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 736px) and (orientation: portrait) {
+  ul.icons.labeled {
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  ul.icons.labeled li {
+    display: block;
+    padding: 0;
+    margin: 1.5em 0 0 0;
+  }
+  ul.icons.labeled li .icon:before {
+    width: 1.5em;
+    display: block;
+    float: left;
+    margin-right: 0;
+  }
+  ul.icons.labeled li .icon:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  ul.icons.labeled li:first-child {
+    margin-top: 0;
+  }
 }
 
 /* Nav */
